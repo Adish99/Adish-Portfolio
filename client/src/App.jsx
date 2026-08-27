@@ -1,9 +1,14 @@
+import Navbar from "./components/layout/Navbar";
+import Hero from "./sections/Hero/Hero";
+
 const App=()=>{
   return(
-    <div>
-      <h1>Adish Babukarki</h1>
-      <p>Full-Stack Software Engineer</p>
-    </div>
+    <>
+    <Navbar/>
+    <main>
+  <Hero/>
+    </main>
+    </>
   )
 }
 
