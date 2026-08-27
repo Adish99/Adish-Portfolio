@@ -1,0 +1,17 @@
+@media (max-width: 768px) {
+  :root {
+    --font-size-3xl: 2.25rem;
+    --font-size-4xl: 3rem;
+
+    --space-3xl: 4rem;
+    --space-4xl: 5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  :root {
+    --font-size-2xl: 1.75rem;
+    --font-size-3xl: 2rem;
+    --font-size-4xl: 2.5rem;
+  }
+}
