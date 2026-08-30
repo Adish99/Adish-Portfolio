@@ -1,0 +1,258 @@
+.about {
+  position: relative;
+  padding: var(--space-4xl) 0;
+
+  background: var(--color-surface);
+}
+
+.about-container {
+  width: min(100% - 2rem, var(--container-width));
+  margin: 0 auto;
+}
+
+/* Section Heading */
+
+.section-heading {
+  margin-bottom: var(--space-3xl);
+}
+
+.section-label {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+
+  margin-bottom: var(--space-md);
+
+  color: var(--color-primary);
+  font-size: var(--font-size-xs);
+  font-weight: 700;
+  letter-spacing: 0.15em;
+}
+
+.section-label span {
+  width: 8px;
+  height: 8px;
+
+  border-radius: 50%;
+  background: var(--color-primary);
+}
+
+.section-heading h2 {
+  max-width: 600px;
+
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  line-height: 1;
+  letter-spacing: -0.04em;
+}
+
+.section-heading h2 span {
+  display: block;
+  color: var(--color-primary);
+}
+
+/* Main Grid */
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+
+  gap: var(--space-4xl);
+  align-items: center;
+}
+
+/* Content */
+
+.about-content {
+  max-width: 650px;
+}
+
+.about-content p {
+  margin-bottom: var(--space-lg);
+
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-md);
+}
+
+.about-content .about-intro {
+  color: var(--color-text-primary);
+
+  font-size: var(--font-size-xl);
+  line-height: 1.5;
+  font-weight: 500;
+}
+
+/* Highlights */
+
+.about-highlights {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: var(--space-md);
+
+  margin-top: var(--space-2xl);
+}
+
+.about-highlight {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+
+  padding: var(--space-lg);
+
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+
+  background: var(--color-background);
+
+  transition: var(--transition-normal);
+}
+
+.about-highlight:hover {
+  border-color: var(--color-primary);
+  transform: translateY(-3px);
+}
+
+.about-highlight svg {
+  flex-shrink: 0;
+  color: var(--color-primary);
+}
+
+.about-highlight strong {
+  display: block;
+
+  color: var(--color-text-primary);
+  font-size: var(--font-size-sm);
+}
+
+.about-highlight span {
+  display: block;
+
+  margin-top: 2px;
+
+  color: var(--color-text-muted);
+  font-size: var(--font-size-xs);
+}
+
+/* Player Card */
+
+.about-card {
+  position: relative;
+
+  padding: var(--space-xl);
+
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(34, 197, 94, 0.08),
+      transparent 45%
+    ),
+    var(--color-background);
+
+  box-shadow: var(--shadow-lg);
+
+  overflow: hidden;
+}
+
+.about-card::before {
+  content: "";
+
+  position: absolute;
+
+  width: 220px;
+  height: 220px;
+
+  right: -100px;
+  top: -100px;
+
+  border: 1px solid var(--color-primary);
+  border-radius: 50%;
+
+  opacity: 0.2;
+}
+
+.about-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  color: var(--color-text-muted);
+
+  font-size: var(--font-size-xs);
+  font-weight: 700;
+  letter-spacing: 0.12em;
+}
+
+.about-card-header svg {
+  color: var(--color-primary);
+}
+
+.about-card-number {
+  margin-top: var(--space-2xl);
+
+  color: var(--color-primary);
+
+  font-size: 5rem;
+  line-height: 1;
+
+  font-weight: 800;
+  opacity: 0.15;
+}
+
+.about-card-name {
+  margin-top: -10px;
+}
+
+.about-card-name > span {
+  color: var(--color-primary);
+
+  font-size: var(--font-size-xs);
+  font-weight: 700;
+
+  letter-spacing: 0.12em;
+}
+
+.about-card-name h3 {
+  margin-top: var(--space-sm);
+
+  font-size: 2rem;
+  line-height: 1;
+
+  letter-spacing: -0.03em;
+}
+
+.about-stats {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  margin-top: var(--space-2xl);
+
+  border-top: 1px solid var(--color-border);
+}
+
+.about-stats div {
+  padding: var(--space-md);
+
+  border-bottom: 1px solid var(--color-border);
+}
+
+.about-stats div:nth-child(odd) {
+  border-right: 1px solid var(--color-border);
+}
+
+.about-stats strong {
+  display: block;
+
+  color: var(--color-primary);
+
+  font-size: var(--font-size-lg);
+}
+
+.about-stats span {
+  color: var(--color-text-muted);
+
+  font-size: 0.65rem;
+  letter-spacing: 0.1em;
+}

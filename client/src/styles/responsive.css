@@ -104,3 +104,29 @@
     --font-size-4xl: 2.5rem;
   }
 }
+@media (max-width: 900px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-3xl);
+  }
+
+  .about-content {
+    max-width: 100%;
+  }
+
+  .about-card {
+    max-width: 500px;
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .about-highlights {
+    grid-template-columns: 1fr;
+  }
+
+  .about-content .about-intro {
+    font-size: var(--font-size-lg);
+  }
+}

@@ -1,4 +1,6 @@
 import Navbar from "./components/layout/Navbar";
+import About from "./sections/About/About";
+
 import Hero from "./sections/Hero/Hero";
 
 const App=()=>{
@@ -7,6 +9,7 @@ const App=()=>{
     <Navbar/>
     <main>
   <Hero/>
+  <About/>
     </main>
     </>
   )
