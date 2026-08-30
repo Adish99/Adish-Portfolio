@@ -1,0 +1,183 @@
+.skills {
+  padding: var(--space-4xl) 0;
+  background: var(--color-background);
+}
+
+.skills-container {
+  width: min(100% - 2rem, var(--container-width));
+  margin: 0 auto;
+}
+
+.skills-layout {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: var(--space-3xl);
+  align-items: start;
+}
+
+/* Skill Cards */
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-md);
+}
+
+.skill-card {
+  padding: var(--space-xl);
+
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+
+  background: var(--color-surface);
+
+  transition: var(--transition-normal);
+}
+
+.skill-card:hover {
+  border-color: var(--color-primary);
+  transform: translateY(-4px);
+}
+
+.skill-card-icon {
+  width: 44px;
+  height: 44px;
+
+  display: grid;
+  place-items: center;
+
+  margin-bottom: var(--space-lg);
+
+  border-radius: var(--radius-md);
+
+  background: rgba(34, 197, 94, 0.1);
+  color: var(--color-primary);
+}
+
+.skill-card h3 {
+  margin-bottom: var(--space-md);
+
+  font-size: var(--font-size-lg);
+}
+
+.skill-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+}
+
+.skill-list span {
+  padding: 0.35rem 0.65rem;
+
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-full);
+
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-xs);
+}
+
+/* Player Stats */
+
+.skill-stats-card {
+  position: sticky;
+  top: 100px;
+
+  padding: var(--space-xl);
+
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(34, 197, 94, 0.08),
+      transparent 50%
+    ),
+    var(--color-surface);
+
+  box-shadow: var(--shadow-lg);
+}
+
+.skill-stats-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.skill-stats-header span {
+  color: var(--color-primary);
+
+  font-size: var(--font-size-xs);
+  font-weight: 700;
+
+  letter-spacing: 0.12em;
+}
+
+.skill-stats-header h3 {
+  margin-top: var(--space-sm);
+
+  font-size: 2rem;
+}
+
+.skill-stats-header strong {
+  color: var(--color-primary);
+
+  font-size: 3rem;
+  line-height: 1;
+
+  opacity: 0.8;
+}
+
+.skill-stats-position {
+  margin-top: var(--space-sm);
+
+  color: var(--color-text-muted);
+
+  font-size: var(--font-size-xs);
+  letter-spacing: 0.08em;
+}
+
+.skill-stat-list {
+  margin-top: var(--space-2xl);
+}
+
+.skill-stat {
+  margin-bottom: var(--space-lg);
+}
+
+.skill-stat-info {
+  display: flex;
+  justify-content: space-between;
+
+  margin-bottom: var(--space-sm);
+
+  font-size: var(--font-size-sm);
+}
+
+.skill-stat-info span {
+  color: var(--color-text-secondary);
+}
+
+.skill-stat-info strong {
+  color: var(--color-primary);
+}
+
+.skill-stat-bar {
+  height: 5px;
+
+  overflow: hidden;
+
+  border-radius: var(--radius-full);
+
+  background: var(--color-border);
+}
+
+.skill-stat-bar span {
+  display: block;
+
+  height: 100%;
+
+  border-radius: inherit;
+
+  background: var(--color-primary);
+}

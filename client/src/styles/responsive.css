@@ -130,3 +130,22 @@
     font-size: var(--font-size-lg);
   }
 }
+@media (max-width: 900px) {
+  .skills-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .skill-stats-card {
+    position: static;
+
+    max-width: 600px;
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+}
