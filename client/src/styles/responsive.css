@@ -189,3 +189,42 @@
     gap: var(--space-xl);
   }
 }
+@media (max-width: 900px) {
+  .experience-layout {
+    grid-template-columns: 1fr;
+    gap: var(--space-3xl);
+  }
+
+  .education-card {
+    position: static;
+
+    max-width: 600px;
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .experience-item {
+    grid-template-columns: 36px 1fr;
+
+    gap: var(--space-md);
+  }
+
+  .experience-timeline::before {
+    left: 17px;
+  }
+
+  .experience-marker {
+    width: 36px;
+    height: 36px;
+  }
+
+  .experience-content {
+    padding: var(--space-lg);
+  }
+
+  .experience-top span:first-child {
+    max-width: 75%;
+  }
+}

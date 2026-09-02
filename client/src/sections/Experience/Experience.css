@@ -1,0 +1,270 @@
+.experience {
+  padding: var(--space-4xl) 0;
+  background: var(--color-surface);
+}
+
+.experience-container {
+  width: min(100% - 2rem, var(--container-width));
+  margin: 0 auto;
+}
+
+.experience-layout {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: var(--space-4xl);
+  align-items: start;
+}
+
+/* Timeline */
+
+.experience-timeline {
+  position: relative;
+}
+
+.experience-timeline::before {
+  content: "";
+
+  position: absolute;
+
+  left: 22px;
+  top: 25px;
+  bottom: 25px;
+
+  width: 1px;
+
+  background: var(--color-border);
+}
+
+.experience-item {
+  position: relative;
+
+  display: grid;
+  grid-template-columns: 46px 1fr;
+
+  gap: var(--space-lg);
+
+  margin-bottom: var(--space-2xl);
+}
+
+.experience-item:last-child {
+  margin-bottom: 0;
+}
+
+/* Timeline Marker */
+
+.experience-marker {
+  position: relative;
+  z-index: 2;
+
+  width: 46px;
+  height: 46px;
+
+  display: grid;
+  place-items: center;
+
+  border: 1px solid var(--color-border);
+  border-radius: 50%;
+
+  background: var(--color-surface);
+
+  color: var(--color-primary);
+
+  transition: var(--transition-normal);
+}
+
+.experience-item:hover .experience-marker {
+  border-color: var(--color-primary);
+
+  background: var(--color-primary);
+  color: var(--color-background);
+}
+
+/* Experience Content */
+
+.experience-content {
+  padding: var(--space-xl);
+
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+
+  background: var(--color-background);
+
+  transition: var(--transition-normal);
+}
+
+.experience-content:hover {
+  border-color: var(--color-primary);
+
+  transform: translateX(4px);
+}
+
+.experience-top {
+  display: flex;
+  justify-content: space-between;
+
+  margin-bottom: var(--space-md);
+}
+
+.experience-top span {
+  color: var(--color-primary);
+
+  font-size: 0.65rem;
+  font-weight: 700;
+
+  letter-spacing: 0.1em;
+}
+
+.experience-top span:last-child {
+  color: var(--color-text-muted);
+}
+
+.experience-content h3 {
+  font-size: var(--font-size-xl);
+
+  letter-spacing: -0.02em;
+}
+
+.experience-type {
+  margin-top: 4px;
+
+  color: var(--color-text-muted);
+
+  font-size: var(--font-size-xs);
+  font-weight: 600;
+
+  letter-spacing: 0.08em;
+}
+
+.experience-description {
+  margin-top: var(--space-lg);
+
+  color: var(--color-text-secondary);
+
+  line-height: 1.7;
+}
+
+/* Skills */
+
+.experience-skills {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: var(--space-sm);
+
+  margin-top: var(--space-lg);
+}
+
+.experience-skills span {
+  padding: 0.35rem 0.65rem;
+
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-full);
+
+  color: var(--color-text-secondary);
+
+  font-size: var(--font-size-xs);
+}
+
+/* Education */
+
+.education-card {
+  position: sticky;
+  top: 100px;
+
+  padding: var(--space-xl);
+
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(34, 197, 94, 0.08),
+      transparent 55%
+    ),
+    var(--color-background);
+
+  box-shadow: var(--shadow-lg);
+
+  overflow: hidden;
+}
+
+.education-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  color: var(--color-primary);
+
+  font-size: var(--font-size-xs);
+  font-weight: 700;
+
+  letter-spacing: 0.12em;
+}
+
+.education-number {
+  margin-top: var(--space-2xl);
+
+  color: var(--color-primary);
+
+  font-size: 5rem;
+  font-weight: 800;
+  line-height: 1;
+
+  opacity: 0.12;
+}
+
+.education-content {
+  margin-top: -8px;
+}
+
+.education-content > span {
+  color: var(--color-primary);
+
+  font-size: 0.65rem;
+  font-weight: 700;
+
+  letter-spacing: 0.1em;
+}
+
+.education-content h3 {
+  margin-top: var(--space-sm);
+
+  font-size: clamp(1.6rem, 3vw, 2.3rem);
+
+  line-height: 1.1;
+
+  letter-spacing: -0.03em;
+}
+
+.education-content p {
+  margin-top: var(--space-md);
+
+  color: var(--color-text-secondary);
+}
+
+.education-footer {
+  display: flex;
+  flex-direction: column;
+
+  gap: 4px;
+
+  margin-top: var(--space-2xl);
+
+  padding-top: var(--space-lg);
+
+  border-top: 1px solid var(--color-border);
+}
+
+.education-footer span {
+  color: var(--color-text-muted);
+
+  font-size: 0.6rem;
+  letter-spacing: 0.1em;
+}
+
+.education-footer strong {
+  color: var(--color-primary);
+
+  font-size: var(--font-size-xs);
+}
