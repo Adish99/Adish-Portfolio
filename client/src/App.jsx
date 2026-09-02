@@ -4,6 +4,7 @@ import Experience from "./sections/Experience/Experience";
 
 import Hero from "./sections/Hero/Hero";
 import Projects from "./sections/Projects/Projects";
+import Services from "./sections/Services/Services";
 import Skills from "./sections/Skills/Skills";
 
 const App=()=>{
@@ -16,6 +17,7 @@ const App=()=>{
   <Skills/>
   <Projects/>
   <Experience/>
+  <Services/>
     </main>
     </>
   )

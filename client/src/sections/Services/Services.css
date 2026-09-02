@@ -1,0 +1,110 @@
+.services {
+  padding: var(--space-4xl) 0;
+  background: var(--color-background);
+}
+
+.services-container {
+  width: min(100% - 2rem, var(--container-width));
+  margin: 0 auto;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-lg);
+}
+
+.service-card {
+  position: relative;
+  min-height: 320px;
+  padding: var(--space-xl);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  background: var(--color-surface);
+  overflow: hidden;
+  transition: var(--transition-normal);
+}
+
+.service-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: var(--color-primary);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: var(--transition-normal);
+}
+
+.service-card:hover {
+  border-color: var(--color-primary);
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lg);
+}
+
+.service-card:hover::before {
+  transform: scaleX(1);
+}
+
+.service-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.service-number {
+  color: var(--color-text-muted);
+  font-size: var(--font-size-sm);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+.service-icon {
+  width: 48px;
+  height: 48px;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  color: var(--color-primary);
+  background: var(--color-background);
+  transition: var(--transition-normal);
+}
+
+.service-card:hover .service-icon {
+  border-color: var(--color-primary);
+  background: var(--color-primary);
+  color: var(--color-background);
+}
+
+.service-content {
+  margin-top: var(--space-2xl);
+}
+
+.service-content h3 {
+  font-size: var(--font-size-xl);
+  letter-spacing: -0.02em;
+}
+
+.service-content p {
+  margin-top: var(--space-md);
+  color: var(--color-text-secondary);
+  line-height: 1.7;
+}
+
+.service-skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+  margin-top: var(--space-xl);
+}
+
+.service-skills span {
+  padding: 0.35rem 0.65rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-full);
+  color: var(--color-text-muted);
+  font-size: var(--font-size-xs);
+}
