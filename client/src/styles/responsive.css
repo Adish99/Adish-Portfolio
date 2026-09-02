@@ -259,3 +259,24 @@
     padding: var(--space-lg);
   }
 }
+@media (max-width: 900px) {
+  .contact-layout {
+    grid-template-columns: 1fr;
+    gap: var(--space-3xl);
+  }
+
+  .contact-intro p {
+    max-width: 650px;
+  }
+}
+
+@media (max-width: 600px) {
+  .contact-form {
+    padding: var(--space-lg);
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+}
