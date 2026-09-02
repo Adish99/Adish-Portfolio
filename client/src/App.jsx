@@ -1,5 +1,6 @@
 import Navbar from "./components/layout/Navbar";
 import About from "./sections/About/About";
+import Achievements from "./sections/Achievements/Achievements";
 import Experience from "./sections/Experience/Experience";
 
 import Hero from "./sections/Hero/Hero";
@@ -18,6 +19,7 @@ const App=()=>{
   <Projects/>
   <Experience/>
   <Services/>
+  <Achievements/>
     </main>
     </>
   )

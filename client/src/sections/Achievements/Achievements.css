@@ -1,0 +1,102 @@
+.achievements {
+  padding: var(--space-4xl) 0;
+  background: var(--color-surface);
+}
+
+.achievements-container {
+  width: min(100% - 2rem, var(--container-width));
+  margin: 0 auto;
+}
+
+.achievements-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-lg);
+}
+
+.achievement-card {
+  position: relative;
+  padding: var(--space-xl);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  background: var(--color-background);
+  overflow: hidden;
+  transition: var(--transition-normal);
+}
+
+.achievement-card::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 2px;
+  height: 100%;
+  background: var(--color-primary);
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: var(--transition-normal);
+}
+
+.achievement-card:hover {
+  border-color: var(--color-primary);
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+}
+
+.achievement-card:hover::before {
+  transform: scaleY(1);
+}
+
+.achievement-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.achievement-number {
+  color: var(--color-text-muted);
+  font-size: var(--font-size-sm);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+.achievement-icon {
+  width: 48px;
+  height: 48px;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  color: var(--color-primary);
+  background: var(--color-surface);
+  transition: var(--transition-normal);
+}
+
+.achievement-card:hover .achievement-icon {
+  border-color: var(--color-primary);
+  background: var(--color-primary);
+  color: var(--color-background);
+}
+
+.achievement-content {
+  margin-top: var(--space-2xl);
+}
+
+.achievement-tag {
+  color: var(--color-primary);
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+}
+
+.achievement-content h3 {
+  margin-top: var(--space-sm);
+  font-size: var(--font-size-xl);
+  letter-spacing: -0.02em;
+}
+
+.achievement-content p {
+  margin-top: var(--space-md);
+  color: var(--color-text-secondary);
+  line-height: 1.7;
+}
