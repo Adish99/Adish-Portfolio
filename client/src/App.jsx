@@ -3,6 +3,7 @@ import About from "./sections/About/About";
 import Achievements from "./sections/Achievements/Achievements";
 import Contact from "./sections/Contacts/Contacts";
 import Experience from "./sections/Experience/Experience";
+import Footer from "./sections/Footer/Footer";
 
 import Hero from "./sections/Hero/Hero";
 import Projects from "./sections/Projects/Projects";
@@ -22,6 +23,7 @@ const App=()=>{
   <Services/>
   <Achievements/>
   <Contact/>
+  <Footer/>
     </main>
     </>
   )

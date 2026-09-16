@@ -1,0 +1,239 @@
+.footer {
+  padding: var(--space-3xl) 0 var(--space-lg);
+  background: var(--color-surface);
+  border-top: 1px solid var(--color-border);
+}
+
+.footer-container {
+  width: min(100% - 2rem, var(--container-width));
+  margin: 0 auto;
+}
+
+/* =========================
+   Main Footer
+========================= */
+
+.footer-main {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr;
+  gap: var(--space-3xl);
+  padding-bottom: var(--space-3xl);
+}
+
+/* =========================
+   Brand
+========================= */
+
+.footer-brand {
+  max-width: 420px;
+}
+
+.footer-logo {
+  width: 46px;
+  height: 46px;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  color: var(--color-text-primary);
+  font-size: 0.9rem;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  transition: var(--transition-normal);
+}
+
+.footer-logo:hover {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+  transform: translateY(-2px);
+}
+
+.footer-brand h3 {
+  margin-top: var(--space-lg);
+  font-size: 1.4rem;
+  line-height: 1.2;
+  letter-spacing: -0.03em;
+}
+
+.footer-brand h3 span {
+  display: block;
+  color: var(--color-primary);
+}
+
+.footer-brand p {
+  max-width: 380px;
+  margin-top: var(--space-md);
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-sm);
+  line-height: 1.7;
+}
+
+/* =========================
+   Footer Headings
+========================= */
+
+.footer-heading {
+  display: block;
+  margin-bottom: var(--space-lg);
+  color: var(--color-text-muted);
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+}
+
+/* =========================
+   Quick Links
+========================= */
+
+.footer-links nav {
+  display: grid;
+  grid-template-columns: repeat(2, max-content);
+  gap: var(--space-sm) var(--space-xl);
+}
+
+.footer-links a {
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-sm);
+  transition: var(--transition-normal);
+}
+
+.footer-links a:hover {
+  color: var(--color-primary);
+  transform: translateX(3px);
+}
+
+/* =========================
+   Social Links
+========================= */
+
+.footer-socials {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.footer-socials a {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-sm);
+  width: fit-content;
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-sm);
+  transition: var(--transition-normal);
+}
+
+.footer-socials a:hover {
+  color: var(--color-primary);
+  transform: translateX(3px);
+}
+
+/* =========================
+   Location
+========================= */
+
+.footer-location {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  margin-top: var(--space-xl);
+  color: var(--color-text-muted);
+  font-size: var(--font-size-sm);
+}
+
+.footer-location svg {
+  color: var(--color-primary);
+  flex-shrink: 0;
+}
+
+/* =========================
+   Bottom
+========================= */
+
+.footer-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-lg);
+  padding-top: var(--space-lg);
+  border-top: 1px solid var(--color-border);
+}
+
+.footer-bottom p {
+  color: var(--color-text-muted);
+  font-size: 0.7rem;
+}
+
+.footer-built {
+  margin-left: auto;
+}
+
+/* =========================
+   Back To Top
+========================= */
+
+.footer-top {
+  width: 40px;
+  height: 40px;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: transparent;
+  color: var(--color-text-secondary);
+  cursor: pointer;
+  transition: var(--transition-normal);
+}
+
+.footer-top:hover {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+  transform: translateY(-3px);
+}
+
+/* =========================
+   Responsive
+========================= */
+
+@media (max-width: 900px) {
+  .footer-main {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-2xl);
+  }
+
+  .footer-brand {
+    grid-column: 1 / -1;
+    max-width: 600px;
+  }
+}
+
+@media (max-width: 600px) {
+  .footer {
+    padding-top: var(--space-2xl);
+  }
+
+  .footer-main {
+    grid-template-columns: 1fr;
+    gap: var(--space-2xl);
+    padding-bottom: var(--space-2xl);
+  }
+
+  .footer-brand {
+    grid-column: auto;
+  }
+
+  .footer-links nav {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .footer-bottom {
+    flex-wrap: wrap;
+  }
+
+  .footer-built {
+    margin-left: 0;
+  }
+
+  .footer-top {
+    margin-left: auto;
+  }
+}
