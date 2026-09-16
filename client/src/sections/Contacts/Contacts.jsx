@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { motion } from "framer-motion";
 
 import {
   Mail,
@@ -11,6 +12,8 @@ import {
   FaLinkedin,
 } from "react-icons/fa";
 
+import { fadeUp } from "../../utils/animations";
+
 import "./Contacts.css";
 
 const contactDetails = [
@@ -18,7 +21,7 @@ const contactDetails = [
     icon: Mail,
     label: "EMAIL",
     value: "karkiadish999@gmail.com",
-    href: "karkiadish999@gmail.com",
+    href: "mailto:karkiadish999@gmail.com",
   },
   {
     icon: FaGithub,
@@ -70,7 +73,13 @@ const Contact = () => {
       <div className="contact-container">
 
         {/* Section Heading */}
-        <div className="section-heading">
+        <motion.div
+          className="section-heading"
+          variants={fadeUp}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.2 }}
+        >
           <p className="section-label">
             <span></span>
             CONTACT
@@ -85,13 +94,18 @@ const Contact = () => {
             Have a project, opportunity or idea in mind?
             Feel free to get in touch and let's discuss it.
           </p>
-        </div>
+        </motion.div>
 
         <div className="contact-layout">
 
           {/* Contact Information */}
-          <div className="contact-info">
-
+          <motion.div
+  className="contact-info"
+  variants={fadeUp}
+  initial="hidden"
+  whileInView="visible"
+  viewport={{ once: true, amount: 0.15 }}
+>
             <div className="contact-intro">
               <span>GET IN TOUCH</span>
 
@@ -108,7 +122,16 @@ const Contact = () => {
               </p>
             </div>
 
-            <div className="contact-details">
+            <motion.div
+  className="contact-details"
+  variants={{
+    visible: {
+      transition: {
+        staggerChildren: 0.1,
+      },
+    },
+  }}
+>
               {contactDetails.map((detail) => {
                 const Icon = detail.icon;
 
@@ -116,10 +139,11 @@ const Contact = () => {
                   detail.href.startsWith("http");
 
                 return (
-                  <a
-                    key={detail.label}
-                    href={detail.href}
-                    className="contact-detail"
+  <motion.a
+    key={detail.label}
+    href={detail.href}
+    className="contact-detail"
+    variants={fadeUp}
                     target={isExternal ? "_blank" : undefined}
                     rel={
                       isExternal
@@ -136,19 +160,22 @@ const Contact = () => {
                       <span>{detail.label}</span>
                       <strong>{detail.value}</strong>
                     </div>
-                  </a>
+                  </motion.a>
                 );
               })}
-            </div>
+            </motion.div>
 
-          </div>
+          </motion.div>
 
           {/* Contact Form */}
-          <form
-            className="contact-form"
-            onSubmit={handleSubmit}
-          >
-
+          <motion.form
+  className="contact-form"
+  variants={fadeUp}
+  initial="hidden"
+  whileInView="visible"
+  viewport={{ once: true, amount: 0.15 }}
+  onSubmit={handleSubmit}
+>
             <div className="form-row">
 
               <div className="form-group">
@@ -217,15 +244,21 @@ const Contact = () => {
               />
             </div>
 
-            <button
-              type="submit"
-              className="contact-submit"
-            >
-              <Send size={18} />
-              Send Message
-            </button>
+           <motion.button
+  type="submit"
+  className="contact-submit"
+  whileHover={{
+    y: -2,
+  }}
+  whileTap={{
+    scale: 0.98,
+  }}
+>
+  <Send size={18} />
+  Send Message
+</motion.button>
 
-          </form>
+          </motion.form>
 
         </div>
       </div>
@@ -234,3 +267,4 @@ const Contact = () => {
 };
 
 export default Contact;
+
