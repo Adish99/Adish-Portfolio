@@ -1,6 +1,8 @@
+import { motion } from "framer-motion";
 import { ArrowUpRight, Trophy } from "lucide-react";
 import { FaGithub } from "react-icons/fa";
 import projects from "../../data/projects";
+import { fadeUp, staggerContainer } from "../../utils/animations";
 import "./Projects.css";
 import SectionHeading from "../../components/UI/SectionHeading";
 
@@ -18,14 +20,21 @@ const Projects = () => {
 />
 
         {/* Project Cards */}
-        <div className="projects-list">
+       <motion.div
+  className="projects-list"
+  variants={staggerContainer}
+  initial="hidden"
+  whileInView="visible"
+  viewport={{ once: true, amount: 0.15 }}
+>
           {projects.map((project, index) => (
-            <article
-              className={`project-card ${
-                project.featured ? "project-featured" : ""
-              }`}
-              key={project.id}
-            >
+            <motion.article
+  className={`project-card ${
+    project.featured ? "project-featured" : ""
+  }`}
+  key={project.id}
+  variants={fadeUp}
+>
               {/* Card Header */}
               <div className="project-card-header">
 
@@ -175,12 +184,12 @@ const Projects = () => {
 
               </div>
 
-            </article>
+            </motion.article>
           ))}
-        </div>
+        </motion.div>
 
-      </div>
-    </section>
+     </div>
+     </section>
   );
 };
 
