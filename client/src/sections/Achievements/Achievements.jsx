@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import {
   Trophy,
   Code2,
@@ -8,6 +9,7 @@ import {
 } from "lucide-react";
 
 import "./Achievements.css";
+import { fadeUp, staggerContainer } from "../../utils/animations";
 import SectionHeading from "../../components/UI/SectionHeading";
 
 const achievements = [
@@ -78,15 +80,21 @@ const Achievements = () => {
   description="Key milestones from my development journey and project experience."
 />
 
-        <div className="achievements-grid">
+        <motion.div
+  className="achievements-grid"
+  variants={staggerContainer}
+  initial="hidden"
+  whileInView="visible"
+  viewport={{ once: true, amount: 0.15 }}
+>
           {achievements.map((achievement) => {
             const Icon = achievement.icon;
 
             return (
-              <article
-                className="achievement-card"
-                key={achievement.number}
-              >
+              <motion.article
+  className="achievement-card"
+  variants={fadeUp}
+>
                 <div className="achievement-top">
                   <span className="achievement-number">
                     {achievement.number}
@@ -106,10 +114,10 @@ const Achievements = () => {
 
                   <p>{achievement.description}</p>
                 </div>
-              </article>
+             </motion.article>
             );
           })}
-        </div>
+        </motion.div>
 
       </div>
     </section>
