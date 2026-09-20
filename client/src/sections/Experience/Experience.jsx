@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import {
   BriefcaseBusiness,
   Code2,
@@ -7,6 +8,7 @@ import {
 
 import "./Experience.css";
 import SectionHeading from "../../components/UI/SectionHeading";
+import { fadeUp, staggerContainer } from "../../utils/animations";
 
 const experiences = [
   {
@@ -72,16 +74,23 @@ const Experience = () => {
         <div className="experience-layout">
 
           {/* Experience Timeline */}
-          <div className="experience-timeline">
+         <motion.div
+  className="experience-timeline"
+  variants={staggerContainer}
+  initial="hidden"
+  whileInView="visible"
+  viewport={{ once: true, amount: 0.15 }}
+>
 
             {experiences.map((experience, index) => {
               const Icon = experience.icon;
 
               return (
-                <article
-                  className="experience-item"
-                  key={experience.title}
-                >
+               <motion.article
+  className="experience-item"
+  key={experience.title}
+  variants={fadeUp}
+>
                   <div className="experience-marker">
                     <Icon size={20} />
                   </div>
@@ -110,11 +119,11 @@ const Experience = () => {
                     </div>
 
                   </div>
-                </article>
+                </motion.article>
               );
             })}
 
-          </div>
+         </motion.div>
 
           {/* Education Card */}
           <aside className="education-card">
@@ -150,8 +159,7 @@ const Experience = () => {
           </aside>
 
         </div>
-
-      </div>
+     </div>
     </section>
   );
 };

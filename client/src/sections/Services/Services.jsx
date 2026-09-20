@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import {
   Code2,
   Server,
@@ -8,6 +9,7 @@ import {
 } from "lucide-react";
 
 import "./Services.css";
+import { fadeUp, staggerContainer } from "../../utils/animations";
 import SectionHeading from "../../components/UI/SectionHeading";
 
 const services = [
@@ -116,12 +118,21 @@ const Services = () => {
   description="Modern web development services focused on scalable and user-friendly applications."
 />
 
-        <div className="services-grid">
+       <motion.div
+  className="services-grid"
+  variants={staggerContainer}
+  initial="hidden"
+  whileInView="visible"
+  viewport={{ once: true, amount: 0.15 }}
+>
           {services.map((service) => {
             const Icon = service.icon;
 
             return (
-              <article className="service-card" key={service.number}>
+            <motion.article
+  className="service-card"
+  variants={fadeUp}
+>
 
                 <div className="service-top">
                   <span className="service-number">
@@ -145,10 +156,10 @@ const Services = () => {
                   </div>
                 </div>
 
-              </article>
+              </motion.article>
             );
           })}
-        </div>
+        </motion.div>
 
       </div>
     </section>
