@@ -1,4 +1,5 @@
 import { Code2, GraduationCap, Trophy } from "lucide-react";
+import SectionHeading from "../../components/UI/SectionHeading";
 import "./About.css";
 
 const About = () => {
@@ -7,17 +8,12 @@ const About = () => {
       <div className="about-container">
 
         {/* Section Header */}
-        <div className="section-heading">
-          <p className="section-label">
-            <span></span>
-            ABOUT ME
-          </p>
-
-          <h2>
-            More Than Just
-            <span>Code.</span>
-          </h2>
-        </div>
+       <SectionHeading
+  label="ABOUT"
+  title="More Than"
+  highlight="Just Code."
+  description="I enjoy turning ideas into modern, functional and meaningful digital experiences."
+/>
 
         {/* About Content */}
         <div className="about-grid">

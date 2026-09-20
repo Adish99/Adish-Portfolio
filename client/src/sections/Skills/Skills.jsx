@@ -7,6 +7,7 @@ import {
   Wrench,
 } from "lucide-react";
 import "./Skills.css";
+import SectionHeading from "../../components/UI/SectionHeading";
 
 const skillCategories = [
   {
@@ -100,17 +101,12 @@ const Skills = () => {
       <div className="skills-container">
 
         {/* Section Header */}
-        <div className="section-heading">
-          <p className="section-label">
-            <span></span>
-            TECHNICAL SKILLS
-          </p>
-
-          <h2>
-            My Technical
-            <span>Game.</span>
-          </h2>
-        </div>
+       <SectionHeading
+  label="SKILLS"
+  title="Technical"
+  highlight="Arsenal."
+  description="Technologies and tools I use to build modern web applications."
+/>
 
         <div className="skills-layout">
 
