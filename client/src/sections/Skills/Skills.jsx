@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import {
   Braces,
   Database,
@@ -7,6 +8,7 @@ import {
   Wrench,
 } from "lucide-react";
 import "./Skills.css";
+import { fadeUp, staggerContainer } from "../../utils/animations";
 import SectionHeading from "../../components/UI/SectionHeading";
 
 const skillCategories = [
@@ -111,12 +113,22 @@ const Skills = () => {
         <div className="skills-layout">
 
           {/* Skill Categories */}
-          <div className="skills-grid">
+          <motion.div
+  className="skills-grid"
+  variants={staggerContainer}
+  initial="hidden"
+  whileInView="visible"
+  viewport={{ once: true, amount: 0.2 }}
+>
             {skillCategories.map((category) => {
               const Icon = category.icon;
 
               return (
-                <article className="skill-card" key={category.title}>
+               <motion.article
+  className="skill-card"
+  key={category.title}
+  variants={fadeUp}
+>
                   <div className="skill-card-icon">
                     <Icon size={22} />
                   </div>
@@ -128,10 +140,10 @@ const Skills = () => {
                       <span key={skill}>{skill}</span>
                     ))}
                   </div>
-                </article>
+                </motion.article>
               );
             })}
-          </div>
+          </motion.div>
 
           {/* Player Stats */}
           <aside className="skill-stats-card">
