@@ -8,6 +8,7 @@ import {
 } from "lucide-react";
 
 import "./Achievements.css";
+import SectionHeading from "../../components/UI/SectionHeading";
 
 const achievements = [
   {
@@ -70,22 +71,12 @@ const Achievements = () => {
     <section className="achievements" id="achievements">
       <div className="achievements-container">
 
-        <div className="section-heading">
-          <p className="section-label">
-            <span></span>
-            ACHIEVEMENTS
-          </p>
-
-          <h2>
-            Career
-            <span>Highlights.</span>
-          </h2>
-
-          <p className="section-description">
-            Milestones and practical experiences built through projects,
-            collaboration and continuous technical development.
-          </p>
-        </div>
+        <SectionHeading
+  label="ACHIEVEMENTS"
+  title="Career"
+  highlight="Highlights."
+  description="Key milestones from my development journey and project experience."
+/>
 
         <div className="achievements-grid">
           {achievements.map((achievement) => {

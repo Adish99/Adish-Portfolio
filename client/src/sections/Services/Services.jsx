@@ -8,6 +8,7 @@ import {
 } from "lucide-react";
 
 import "./Services.css";
+import SectionHeading from "../../components/UI/SectionHeading";
 
 const services = [
   {
@@ -108,22 +109,12 @@ const Services = () => {
     <section className="services" id="services">
       <div className="services-container">
 
-        <div className="section-heading">
-          <p className="section-label">
-            <span></span>
-            WHAT I DO
-          </p>
-
-          <h2>
-            My Development
-            <span>Strengths.</span>
-          </h2>
-
-          <p className="section-description">
-            Practical development skills built through real projects,
-            continuous learning and hands-on problem solving.
-          </p>
-        </div>
+        <SectionHeading
+  label="SERVICES"
+  title="What I"
+  highlight="Build."
+  description="Modern web development services focused on scalable and user-friendly applications."
+/>
 
         <div className="services-grid">
           {services.map((service) => {

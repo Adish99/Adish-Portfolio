@@ -6,6 +6,7 @@ import {
 } from "lucide-react";
 
 import "./Experience.css";
+import SectionHeading from "../../components/UI/SectionHeading";
 
 const experiences = [
   {
@@ -61,22 +62,12 @@ const Experience = () => {
       <div className="experience-container">
 
         {/* Section Header */}
-        <div className="section-heading">
-          <p className="section-label">
-            <span></span>
-            EXPERIENCE & EDUCATION
-          </p>
-
-          <h2>
-            My Development
-            <span>Journey.</span>
-          </h2>
-
-          <p className="section-description">
-            My experience has been built through hands-on development,
-            collaborative projects and continuous learning.
-          </p>
-        </div>
+        <SectionHeading
+  label="EXPERIENCE"
+  title="My Development"
+  highlight="Journey."
+  description="A journey shaped by projects, collaboration and continuous technical growth."
+/>
 
         <div className="experience-layout">
 

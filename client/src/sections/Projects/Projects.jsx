@@ -2,6 +2,7 @@ import { ArrowUpRight, Trophy } from "lucide-react";
 import { FaGithub } from "react-icons/fa";
 import projects from "../../data/projects";
 import "./Projects.css";
+import SectionHeading from "../../components/UI/SectionHeading";
 
 const Projects = () => {
   return (
@@ -9,23 +10,12 @@ const Projects = () => {
       <div className="projects-container">
 
         {/* Section Header */}
-        <div className="section-heading">
-          <p className="section-label">
-            <span></span>
-            PROJECTS
-          </p>
-
-          <h2>
-            My Development
-            <span>Squad.</span>
-          </h2>
-
-          <p className="section-description">
-            A collection of projects built while developing my skills
-            across frontend, backend, APIs, databases and real-time
-            applications.
-          </p>
-        </div>
+       <SectionHeading
+  label="PROJECTS"
+  title="Selected"
+  highlight="Projects."
+  description="A collection of full-stack and modern web applications I've built."
+/>
 
         {/* Project Cards */}
         <div className="projects-list">
