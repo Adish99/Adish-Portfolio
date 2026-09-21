@@ -132,6 +132,7 @@ const Services = () => {
             <motion.article
   className="service-card"
   variants={fadeUp}
+  whileHover={{ y: -5 }}
 >
 
                 <div className="service-top">

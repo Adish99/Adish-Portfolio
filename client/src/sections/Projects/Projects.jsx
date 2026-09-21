@@ -34,6 +34,7 @@ const Projects = () => {
   }`}
   key={project.id}
   variants={fadeUp}
+  whileHover={{ y: -6 }}
 >
               {/* Card Header */}
               <div className="project-card-header">
