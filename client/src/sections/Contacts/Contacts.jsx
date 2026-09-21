@@ -151,6 +151,7 @@ const Contact = () => {
                         : undefined
                     }
                     aria-label={`${detail.label}: ${detail.value}`}
+                    whileHover={{ x: 4 }}
                   >
                     <div className="contact-detail-icon">
                       <Icon size={19} />

@@ -1,3 +1,4 @@
+import {motion} from "framer-motion";
 import {
   ArrowUp,
   Mail,
@@ -146,13 +147,15 @@ const Footer = () => {
             Built with React + Vite
           </p>
 
-          <button
-            className="footer-top"
-            onClick={scrollToTop}
-            aria-label="Scroll to top"
-          >
-            <ArrowUp size={18} />
-          </button>
+          <motion.button
+  className="footer-top"
+  onClick={scrollToTop}
+  aria-label="Scroll to top"
+  whileHover={{ y: -3 }}
+  whileTap={{ scale: 0.95 }}
+>
+  <ArrowUp size={18} />
+</motion.button>
 
         </div>
 

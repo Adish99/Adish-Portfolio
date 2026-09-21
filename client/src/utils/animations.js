@@ -1,3 +1,4 @@
+
 export const fadeUp = {
   hidden: {
     opacity: 0,

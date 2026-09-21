@@ -94,6 +94,7 @@ const Achievements = () => {
               <motion.article
   className="achievement-card"
   variants={fadeUp}
+  whileHover={{ y: -5 }}
 >
                 <div className="achievement-top">
                   <span className="achievement-number">
