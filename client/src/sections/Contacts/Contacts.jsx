@@ -60,13 +60,37 @@ const Contact = () => {
     }));
   };
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
+ const handleSubmit = async (event) => {
+  event.preventDefault();
 
-    console.log("Contact form:", formData);
+  try {
+    const response = await fetch("http://localhost:5000/api/contact", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(formData),
+    });
 
-    // Email/API integration will be added later.
-  };
+    const data = await response.json();
+
+    if (!response.ok) {
+      throw new Error(data.message || "Failed to send message.");
+    }
+
+    console.log(data);
+
+    // Reset form
+    setFormData({
+      name: "",
+      email: "",
+      subject: "",
+      message: "",
+    });
+  } catch (error) {
+    console.error("Contact form error:", error);
+  }
+};
 
   return (
     <section className="contact" id="contact">
