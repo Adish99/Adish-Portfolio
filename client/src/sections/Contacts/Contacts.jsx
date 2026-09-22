@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
+import { toast } from "react-toastify";
 
 import {
   Mail,
@@ -15,6 +16,7 @@ import {
 import { fadeUp } from "../../utils/animations";
 
 import "./Contacts.css";
+
 
 const contactDetails = [
   {
@@ -51,6 +53,8 @@ const Contact = () => {
     message: "",
   });
 
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
   const handleChange = (event) => {
     const { name, value } = event.target;
 
@@ -62,6 +66,8 @@ const Contact = () => {
 
  const handleSubmit = async (event) => {
   event.preventDefault();
+
+  setIsSubmitting(true);
 
   try {
     const response = await fetch("http://localhost:5000/api/contact", {
@@ -78,9 +84,8 @@ const Contact = () => {
       throw new Error(data.message || "Failed to send message.");
     }
 
-    console.log(data);
+    toast.success("Message sent successfully!");
 
-    // Reset form
     setFormData({
       name: "",
       email: "",
@@ -89,6 +94,12 @@ const Contact = () => {
     });
   } catch (error) {
     console.error("Contact form error:", error);
+
+    toast.error(
+      error.message || "Something went wrong. Please try again."
+    );
+  } finally {
+    setIsSubmitting(false);
   }
 };
 
@@ -269,18 +280,20 @@ const Contact = () => {
               />
             </div>
 
-           <motion.button
+          <motion.button
   type="submit"
   className="contact-submit"
+  disabled={isSubmitting}
   whileHover={{
-    y: -2,
+    y: isSubmitting ? 0 : -2,
   }}
   whileTap={{
-    scale: 0.98,
+    scale: isSubmitting ? 1 : 0.98,
   }}
 >
   <Send size={18} />
-  Send Message
+
+  {isSubmitting ? "Sending..." : "Send Message"}
 </motion.button>
 
           </motion.form>

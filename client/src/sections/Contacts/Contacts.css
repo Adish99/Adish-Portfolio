@@ -172,3 +172,8 @@
   opacity: 0.9;
   transform: translateY(-2px);
 }
+.contact-submit:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
