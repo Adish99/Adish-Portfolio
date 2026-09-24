@@ -30,8 +30,9 @@ export const sendContactMessage = async (req, res) => {
 }
 
     const { data, error } = await resend.emails.send({
-      from: "Portfolio <onboarding@resend.dev>",
-      to: ["karkiadish999@gmail.com"],
+     from: "Adish Portfolio <contact@adishbabukarki.com.np>",
+to: ["karkiadish999@gmail.com"],
+replyTo: email,
       subject: `Portfolio Contact: ${subject}`,
       html: `
         <h2>New Portfolio Contact Message</h2>
