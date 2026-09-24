@@ -11,6 +11,7 @@ const PORT = process.env.PORT || 5000;
 // Middleware
 const allowedOrigins = [
   "http://localhost:5173",
+  "https://adishbabukarki.com.np",
 ];
 
 app.use(
