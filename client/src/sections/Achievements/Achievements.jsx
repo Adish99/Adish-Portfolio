@@ -68,6 +68,7 @@ const achievements = [
   },
 ];
 
+//Achievements component 
 const Achievements = () => {
   return (
     <section className="achievements" id="achievements">
