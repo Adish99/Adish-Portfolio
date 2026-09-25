@@ -45,6 +45,8 @@ const contactDetails = [
   },
 ];
 
+//Contact component
+
 const Contact = () => {
   const [formData, setFormData] = useState({
     name: "",
