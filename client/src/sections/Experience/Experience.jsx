@@ -58,6 +58,8 @@ const experiences = [
   },
 ];
 
+//Experience Component
+
 const Experience = () => {
   return (
     <section className="experience" id="experience">
