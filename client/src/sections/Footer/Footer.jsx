@@ -41,6 +41,7 @@ const socialLinks = [
   },
 ];
 
+//Footer component 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
