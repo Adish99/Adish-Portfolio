@@ -106,6 +106,7 @@ const services = [
   },
 ];
 
+//Services Component
 const Services = () => {
   return (
     <section className="services" id="services">
