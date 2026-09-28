@@ -2,6 +2,8 @@ import { ArrowDown } from "lucide-react";
 import { FaGithub, FaLinkedinIn } from "react-icons/fa";
 import "./Hero.css";
 
+//Hero Component
+
 const Hero = () => {
   return (
     <section className="hero" id="home">
