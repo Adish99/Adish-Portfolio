@@ -6,6 +6,7 @@ import { fadeUp, staggerContainer } from "../../utils/animations";
 import "./Projects.css";
 import SectionHeading from "../../components/UI/SectionHeading";
 
+//Projects Component
 const Projects = () => {
   return (
     <section className="projects" id="projects">
