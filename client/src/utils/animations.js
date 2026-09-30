@@ -1,4 +1,4 @@
-
+//Animation functions or templates
 export const fadeUp = {
   hidden: {
     opacity: 0,
