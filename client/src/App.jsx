@@ -10,6 +10,7 @@ import Projects from "./sections/Projects/Projects";
 import Services from "./sections/Services/Services";
 import Skills from "./sections/Skills/Skills";
 
+//Root Component
 const App=()=>{
   return(
     <>
