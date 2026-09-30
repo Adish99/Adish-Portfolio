@@ -97,6 +97,7 @@ const playerStats = [
   { label: "Adaptability", value: 84 },
 ];
 
+//Skills component
 const Skills = () => {
   return (
     <section className="skills" id="skills">
