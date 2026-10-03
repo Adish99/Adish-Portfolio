@@ -1,7 +1,9 @@
 import { Resend } from "resend";
 
+
 const resend = new Resend(process.env.RESEND_API_KEY);
 
+//Send contact function
 export const sendContactMessage = async (req, res) => {
   try {
     const { name, email, subject, message } = req.body;
