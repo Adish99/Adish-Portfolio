@@ -87,7 +87,7 @@ const skillCategories = [
     ],
   },
 ];
-
+//Players stats template object
 const playerStats = [
   { label: "Frontend", value: 88 },
   { label: "Backend", value: 85 },
