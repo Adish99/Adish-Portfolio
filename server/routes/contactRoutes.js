@@ -4,7 +4,7 @@ import rateLimit from "express-rate-limit";
 import { sendContactMessage } from "../controller/contactController.js";
 
 const router = express.Router();
-
+//Limiter for contacts
 const contactLimiter = rateLimit({
   windowMs: 60 * 60 * 1000, // 1 hour
   limit: 10, // 10 requests per IP
