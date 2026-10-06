@@ -15,7 +15,7 @@ export const sendContactMessage = async (req, res) => {
         message: "All fields are required.",
       });
     }
-
+//Email regex for spam email
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
     if (!emailRegex.test(email)) {
