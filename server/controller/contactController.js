@@ -1,6 +1,6 @@
 import { Resend } from "resend";
 
-
+//Resend for email 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
 //Send contact function
