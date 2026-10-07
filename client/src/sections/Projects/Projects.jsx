@@ -21,12 +21,11 @@ const Projects = () => {
 />
 
         {/* Project Cards */}
-       <motion.div
+ <motion.div
   className="projects-list"
-  variants={staggerContainer}
   initial="hidden"
-  whileInView="visible"
-  viewport={{ once: true, amount: 0.15 }}
+  animate="visible"
+  variants={staggerContainer}
 >
           {projects.map((project, index) => (
             <motion.article
